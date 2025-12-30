@@ -18,9 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('podomarket.urls')),
     path('', include('allauth.urls')),
 ]
-
-# Email settings
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
